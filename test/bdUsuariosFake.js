@@ -1,12 +1,54 @@
 
-
-
 export class bdUsuarioFake {
     constructor(){
         super();
     }
 
-    static const dadosUsuarios =[
+    pesquisarUsuario(_keyUsuario){
+        return this.dadosUsuarios.find((usu) => {
+            return usu._key === keyUsuario;
+        });
+    }
+
+    adicionarUsuario(usuario){
+        usuario._key;
+        usuario._key= Math.floor((Math.random() * 100000) + 1);
+        this.dadosUsuarios = [...this.dadosUsuarios, usuario];
+        return usuario;
+    }
+    
+    adicionarVariosUsuarios(arrayUsuarios){
+        const arrayUsuarios = arrayUsuarios.map(usu =>{
+            usu._key;
+            usuario._key= Math.floor((Math.random() * 100000) + 1);
+        });
+        this.dadosUsuarios = [...this.dadosUsuarios, ...arrayUsuarios];
+        return arrayUsuarios;
+    }
+
+    removerUsuario(_keyUsuario){
+        this.dadosUsuarios = this.dadosUsuarios.filter((usu) => {
+            return usu._key !== _keyUsuario;
+        });
+    }
+
+    atualizarUsuario(usuario){
+        this.dadosUsuarios = this.dadosUsuarios.filter((usu) => {
+            return usuario._key === usu._key?
+                usuario : usu 
+        });
+        return usuario;
+    }
+
+    atualizarVariosUsuario(arrayUsuarios){
+        this.dadosUsuarios = this.dadosUsuarios.filter((usu) => {
+            const usuario = arrayUsuarios.find(u => u._key === usu._key);
+            return usuario? usuario: usu
+        })
+    }
+
+    static get dadosUsuarios () {
+        return [
         {
           "_key": "398012",
           "usuario": "usuario130",
@@ -103,11 +145,7 @@ export class bdUsuarioFake {
           "nome": "usuario10",
           "email": "jao@gmail.com"
         }
-      ], 
-
-      novoUsuario: function(usuario)=>{
-
-      }
-
+      ]
+    }
       
 }
