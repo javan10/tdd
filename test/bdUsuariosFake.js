@@ -1,8 +1,12 @@
 
 
 
-export const bdUsuario = {
-    dadosUsuarios :[
+export class bdUsuarioFake {
+    constructor(){
+        super();
+    }
+
+    static const dadosUsuarios =[
         {
           "_key": "398012",
           "usuario": "usuario130",
@@ -100,5 +104,10 @@ export const bdUsuario = {
           "email": "jao@gmail.com"
         }
       ], 
+
+      novoUsuario: function(usuario)=>{
+
+      }
+
       
 }
