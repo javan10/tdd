@@ -1,12 +1,31 @@
 
 export class bdUsuarioFake {
     constructor(){
-        super();
+        this.dadosUsuarios = [
+            {
+              "_key": "398012",
+              "usuario": "usuario130",
+              "nome": "usuario130",
+              "email": "outro@gmail.com"
+            },
+            {
+              "_key": "399256",
+              "usuario": "novoalterado1",
+              "nome": "novoalterado1",
+              "email": "email@emailalterado"
+            },
+            {
+              "_key": "420693",
+              "usuario": "usuario",
+              "nome": "joao",
+              "email": "jao@gmail.com"
+            },
+          ]
     }
 
     pesquisarUsuario(_keyUsuario){
         return this.dadosUsuarios.find((usu) => {
-            return usu._key === keyUsuario;
+            return usu._key === _keyUsuario;
         });
     }
 
@@ -18,7 +37,7 @@ export class bdUsuarioFake {
     }
     
     adicionarVariosUsuarios(arrayUsuarios){
-        const arrayUsuarios = arrayUsuarios.map(usu =>{
+        arrayUsuarios = arrayUsuarios.map(usu =>{
             usu._key;
             usuario._key= Math.floor((Math.random() * 100000) + 1);
         });
@@ -48,7 +67,7 @@ export class bdUsuarioFake {
     }
 
     static get dadosUsuarios () {
-        return [
+        /* return [
         {
           "_key": "398012",
           "usuario": "usuario130",
@@ -67,7 +86,7 @@ export class bdUsuarioFake {
           "nome": "joao",
           "email": "jao@gmail.com"
         },
-        {
+        / *{
           "_key": "420696",
           "usuario": "usuario120",
           "nome": "usuario120",
@@ -144,8 +163,8 @@ export class bdUsuarioFake {
           "usuario": "usuario10",
           "nome": "usuario10",
           "email": "jao@gmail.com"
-        }
-      ]
+        }* /
+      ]*/
     }
       
 }
