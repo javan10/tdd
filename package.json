@@ -1,0 +1,23 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "Projeto para testar TDD",
+  "main": "src/index.js",
+  "devDependencies": {
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-cli": "^6.26.0",
+    "babel-jest": "^23.6.0",
+    "babel-preset-env": "^1.7.0",
+    "chai": "^4.2.0",
+    "jest": "^23.6.0",
+    "nodemon": "^1.18.7"
+  },
+  "scripts": {
+    "dev": "nodemon --exec babel-node src/index.js",
+    "test": "jest --watch",
+    "test:coverage": "npm test -- --coverage"
+  },
+  "keywords": [],
+  "author": "Javan Castro <javan1000@gmail.com>",
+  "license": "ISC"
+}
